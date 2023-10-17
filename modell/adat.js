@@ -4,7 +4,7 @@ export const urlapleiro = {//objektum
         type: "text",
         placeholder: "Valaki Vagyok",
         value: "",
-        regex: "[A-Z][a-z]{2, 15}",   //regex
+        regex: "[A-Z][a-z]{2,15}",   //regex
         valid:"Nagybetűvel kezdődik, legalább 3 betű legyen!"
     },
 
