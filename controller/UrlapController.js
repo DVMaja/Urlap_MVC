@@ -8,6 +8,11 @@ class UrlapController {
         this.urlapModell = new UrlapModell();
         this.urlapView = new UrlapView($(".urlap"), this.urlapModell.leiro);
 
+        
+        $(window).on("validalas", (event)=> {
+            console.log("esemény működik");//sajnos nem
+        })
+
         //console.log(this.urlapModell.getLeiro());
         //ugyanaz a kettő, csak a másodiknál nem fog kelleni a zárójel. 
         //mastantól a másodikat használjuk
