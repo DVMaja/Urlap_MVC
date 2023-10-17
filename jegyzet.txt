@@ -1,0 +1,4 @@
+Űrlap:
+bekéri 
+    -a nevet
+    -a születési évet
