@@ -1,3 +1,9 @@
+HÁZI FELADAT
+-Hibakeresés
+-number view megcsinálni
+-number típus, textfield, check box, radio, select/option  ///ERősen ajánlott 2 db 
+
+
 Űrlap:
 bekéri 
     -a nevet
@@ -12,3 +18,12 @@ bekéri
         console.log(this.urlapModell.leiro.szul.regex.min);
         //a nev kulcshoz tartozó tipus
         console.log(this.urlapModell.leiro.nev.type);
+
+
+
+a kettő megegyezik.
+MIndekettő jó 
+        this.validElem = this.formElem.children("div:last-child").children(".valid");
+        console.log(this.validElem);        
+        this.validElem = $(".valid:last");
+        console.log(this.validElem);
