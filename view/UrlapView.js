@@ -39,6 +39,9 @@ class UrlapView {
                 placeholder="${this.#leiro[key].placeholder}"
                 value="${this.#leiro[key].value}" 
                 pattern="${this.#leiro[key].regex}">
+
+                <div class="valid lathatosag">OK</div>
+                <div class="invalid lathatosag">${this.#leiro[key].valid}</div>
         </div>`;
         this.formElem.append(txt);
 
