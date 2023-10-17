@@ -4,6 +4,7 @@ import UrlapView from "../view/UrlapView.js";
 class UrlapController {
 
     constructor() {
+        console.log("Construktor");
 
     }
 }
