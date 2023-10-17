@@ -5,15 +5,15 @@ class UrlapModell {
     #leiro;
 
     constructor() {
-        this.#leiro=urlapleiro;
+        this.#leiro = urlapleiro;
     }
 
-    getLeiro(){
+    getLeiro() {
         return this.#leiro;
     }
 
     //mostantól ezt használjuk.
-    get leiro(){
+    get leiro() {
         return this.#leiro;
     }
 }

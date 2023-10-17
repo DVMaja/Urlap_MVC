@@ -4,15 +4,15 @@ export const urlapleiro = {//objektum
         type: "text",
         placeholder: "Valaki Vagyok",
         value: "",
-        regex: "[A-Z][a-z]{3}"   //regex
+        regex: "[A-Z][a-z]{2, 15}"   //regex
 
     },
 
     szul: {
         megj: "Születési idő",
         type: "number",
-        placeholder: "200",
-        value: "200",
+        placeholder: "2000",
+        value: "2000",
         regex: {
             min: 1000,
             max: 2023,
