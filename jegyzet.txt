@@ -27,3 +27,5 @@ MIndekettő jó
         console.log(this.validElem);        
         this.validElem = $(".valid:last");
         console.log(this.validElem);
+
+https://szamalkszalezihu-my.sharepoint.com/:w:/r/personal/dreilinger_vanessza_maja_diak_szamalk-szalezi_hu/_layouts/15/doc2.aspx?sourcedoc=%7B10EED451-1512-4D40-AD58-35C73F6DDCEC%7D&file=REST_API_Gyak%20jegyzet.docx&action=default&mobileredirect=true&DefaultItemOpen=1&ct=1698133259252&wdOrigin=OFFICECOM-WEB.START.EDGEWORTH&cid=d2ed5432-d102-462a-b068-665d806d83aa&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=ec198ac6-c4ef-4e28-95dc-5adf02822f6c
