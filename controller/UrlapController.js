@@ -1,4 +1,4 @@
-import UrlapModell from "../modell/UrlapModell.js";
+import UrlapModell from "../modell/urlap/UrlapModell.js";
 import UrlapView from "../view/urlap/UrlapView.js";
 
 class UrlapController {

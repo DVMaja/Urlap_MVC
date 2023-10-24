@@ -1,4 +1,4 @@
-import AdatModell from "../modell/AdatModell.js";
+import AdatModell from "../modell/adat/AdatModell.js";
 import AdatView from "../view/AdatView.js";
 import DataService from "../modell/DataService.js";
 import HibaView from "../view/HibaView.js";

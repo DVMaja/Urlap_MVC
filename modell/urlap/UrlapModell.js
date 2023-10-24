@@ -1,4 +1,4 @@
-import { urlapleiro } from "./adatokLeiro.js";
+import { urlapleiro } from "../adatokLeiro.js";
 
 class UrlapModell {
 
