@@ -1,10 +1,10 @@
 import UrlapModell from "../modell/UrlapModell.js";
-import UrlapView from "../view/UrlapView.js";
+import UrlapView from "../view/urlap/UrlapView.js";
 
 class UrlapController {
 
     constructor() {
-        console.log("Construktor");
+        //console.log("Construktor");
         this.urlapModell = new UrlapModell();
         this.urlapView = new UrlapView($(".urlap"), this.urlapModell.leiro);
 
