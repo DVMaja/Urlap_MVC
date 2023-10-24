@@ -1,7 +1,7 @@
 import AdatModell from "../modell/adat/AdatModell.js";
-import AdatView from "../view/AdatView.js";
-import DataService from "../modell/DataService.js";
-import HibaView from "../view/HibaView.js";
+import AdatView from "../view/tablazat/AdatView.js";
+import DataService from "../modell/adat/DataService.js";
+import HibaView from "../view/tablazat/HibaView.js";
 
 class AdatController {
 
