@@ -4,7 +4,7 @@ class FejlecView {
 
     constructor(adat, szuloElem) {
         this.#adat = adat;
-        console.log(adat);
+        //console.log(adat);
         this.TablaElem = szuloElem;
         this.#sor();
         this.FejlecElem = this.TablaElem.children("tr:last-child");
@@ -16,7 +16,7 @@ class FejlecView {
 
         for (const key in this.#adat) {
             const element = this.#adat[key];
-            console.log(element);
+            //console.log(element);
 
             txt += `<th>${element.megj}</th>`;
 

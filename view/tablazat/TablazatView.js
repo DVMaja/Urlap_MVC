@@ -5,21 +5,19 @@ import { urlapleiro } from "../../modell/adatokLeiro.js";
 class TablazatView {
     #list = {};
 
-    constructor(list, szuloElem) {
-        //console.log("Látható a TablazatView");
+    constructor(list, szuloElem) {        
         this.#list = list;
-        
+
         szuloElem.append(`<table class="table table-striped table-bordered">`);
         this.tablaElem = szuloElem.children("table");
         this.TablazatViewes();
     }
 
     TablazatViewes() {
-        let txt = "";
-
         new FejlecView(urlapleiro, this.tablaElem);
-        this.#list.forEach(elem => {            
-            new TablazatSorView(elem, this.tablaElem);            
+        
+        this.#list.forEach((elem, index) => {
+            new TablazatSorView(elem, this.tablaElem, index);
         });
     }
 
@@ -30,7 +28,7 @@ class TablazatView {
                     new TablazatSorView(elem, this.tablaElem);
                     break;
                 case "fejlec":
-                    
+
                     break;
                 default:
                 // code block
