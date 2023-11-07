@@ -3,4 +3,8 @@
 .megse {
     cursor: grab;
     font-size: 15pt;
+    
+}
+.megse {
+    display: none;
 }

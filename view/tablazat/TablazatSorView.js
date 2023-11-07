@@ -9,31 +9,33 @@ class TablazatSorView {
     this.TablaElem = szuloElem;
 
     this.#sor();
-    this.sorElem = this.TablaElem.children("tr:last-child");
+    this.sorElem = this.TablaElem.children("tbody").children("tr:last-child");
+    
     this.megseElem = this.sorElem.children("td").children(".megse");
     this.torolElem = this.sorElem.children("td").children(".torol");
     this.pipaElem = this.sorElem.children("td").children(".kesz");
 
-    console.log(this.pipaElem);
-    this.megseElem.css("display", "none");
+    console.log("sor elem" + this.sorElem);
+    
+    //this.megseElem.css("display", "none");
 
     this.pipaElem.on("click", () => {
 
-      valtoztatando.css('background-color', 'green');
+      this.sorElem.css('background-color', 'green');
       this.pipaElem.css("display", "none");
       this.megseElem.css("display", "inline");
   })
 
   
   this.megseElem.on("click", () => {
-      valtoztatando.css('background-color', 'transparent');
+    this.sorElem.css('background-color', 'transparent');
       this.megseElem.css("display", "none");
       this.pipaElem.css("display", "inline");
   })
   
   this.torolElem.on("click", () => {      
-      valtoztatando.remove();
-      valtoztatando.css('background-color', 'transparent');
+    this.sorElem.remove();
+    this.sorElem.css('background-color', 'transparent');
 
       this.esemenyTrigger("torol");
   })
