@@ -14,11 +14,14 @@ class TablazatView {
     }
 
     TablazatViewes() {
+        //let txt = "";
         new FejlecView(urlapleiro, this.tablaElem);
-        
+        //txt += "<tbody>";
         this.#list.forEach((elem, index) => {
             new TablazatSorView(elem, this.tablaElem, index);
         });
+        //txt += "</tbody>";
+        
     }
 
     #tablazatLetrehoz() {
