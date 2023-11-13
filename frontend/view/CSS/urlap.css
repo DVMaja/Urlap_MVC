@@ -1,0 +1,14 @@
+.lathatosag {
+    display: none;
+}
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}
+
+.urlap {
+    padding-bottom: 20px;
+}
