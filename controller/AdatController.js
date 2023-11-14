@@ -10,7 +10,7 @@ class AdatController {
         this.dataService = new DataService();
         //../modell/adat.json --eredeti elérés, ezzel működik
         //http://localhost:8000/forms
-        this.dataService.getdata("http://localhost:8000/forms", this.adatokMegj, this.hibaMegj);   //ide kéne beírni azt a végpontot amit nem tudtunk előállítani
+        this.dataService.getdata("http://localhost:8000/api/forms", this.adatokMegj, this.hibaMegj);   //ide kéne beírni azt a végpontot amit nem tudtunk előállítani
         //nem kell a gömbölyű zárójelk mert nem azonnal akarjuk megjeleníteni ez egy callback fgvény
         //new  AdatModell();
         //new AdatView();      
