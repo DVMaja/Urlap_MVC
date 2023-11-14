@@ -6,9 +6,11 @@ import HibaView from "../view/tablazat/HibaView.js";
 class AdatController {
 
     constructor() {
-        //console.log("Controller Const");
+        console.log("Controller Const");
         this.dataService = new DataService();
-        this.dataService.getdata("../modell/adat.json", this.adatokMegj, this.hibaMegj);   //ide kéne beírni azt a végpontot amit nem tudtunk előállítani
+        //../modell/adat.json --eredeti elérés, ezzel működik
+        //http://localhost:8000/forms
+        this.dataService.getdata("http://localhost:8000/forms", this.adatokMegj, this.hibaMegj);   //ide kéne beírni azt a végpontot amit nem tudtunk előállítani
         //nem kell a gömbölyű zárójelk mert nem azonnal akarjuk megjeleníteni ez egy callback fgvény
         //new  AdatModell();
         //new AdatView();      
