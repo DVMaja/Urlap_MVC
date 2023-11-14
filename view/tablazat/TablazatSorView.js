@@ -40,7 +40,7 @@ class TablazatSorView {
 
   #sor() {
     let txt = "";
-    txt += "<tbody><tr>";
+    txt += "<tr>";//<tbody>
 
     for (const key in this.#adat) {
       const element = this.#adat[key];
@@ -51,7 +51,7 @@ class TablazatSorView {
                 <span class="megse">❌</span>
                 <span class="torol">🗑️</span></td>`;
 
-    txt += "</tr></tbody>";
+    txt += "</tr>";//</tbody>
     this.TablaElem.append(txt);
   }
 
