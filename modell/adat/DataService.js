@@ -15,7 +15,7 @@ class DataService {
                 console.log("Státusz: ", response.status);
                 console.log("Státusz szöveg: ", response.statusText);
                 console.log("Válasz fejléc: ", response.headers);
-                console.log("Válasz config: ", response.config); 
+                console.log("Válasz config: ", response.config);
                 callback(response.data);
             })
             .catch(function (error) {
@@ -28,6 +28,22 @@ class DataService {
                 console.log("finally");
             });
 
+    }
+
+    postdata(apiVegpont, data) {
+        axios
+            .post(apiVegpont, data, {
+                headers: {
+                    "X-CSRF-TOKEN": response.headers["x-csrf-token"], // Az XSRF token a válasz fejlécből
+                },
+            })
+
+            .then((response) => {
+                console.log("RESP", response);
+            })
+            .catch(function (error) {
+                console.log("hiba" + error);
+            })
     }
 }
 export default DataService;
