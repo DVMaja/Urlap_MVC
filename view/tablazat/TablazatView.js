@@ -5,7 +5,7 @@ import { urlapleiro } from "../../modell/adatokLeiro.js";
 class TablazatView {
     #list = {};
 
-    constructor(list, szuloElem) {        
+    constructor(list, szuloElem) {
         this.#list = list;
 
         szuloElem.append(`<table class="table table-striped table-bordered">`);
@@ -14,14 +14,13 @@ class TablazatView {
     }
 
     TablazatViewes() {
-        //let txt = "";
+        let txt = "";
         new FejlecView(urlapleiro, this.tablaElem);
-        //txt += "<tbody>";
+        txt += "<tbody>";
+        this.tablaElem.append(txt);
         this.#list.forEach((elem, index) => {
             new TablazatSorView(elem, this.tablaElem, index);
         });
-        //txt += "</tbody>";
-        
     }
 
     #tablazatLetrehoz() {
