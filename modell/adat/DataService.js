@@ -30,7 +30,7 @@ class DataService {
 
     }
 
-    postdata(apiVegpont, data) {
+    postData(apiVegpont, data) {
         axios
             .post(apiVegpont, data, {
                 headers: {
@@ -45,5 +45,34 @@ class DataService {
                 console.log("hiba" + error);
             })
     }
+
+    putData(apiVegpont, data) {
+        console.log(data);
+        console.log(`${apiVegpont}/${data.id}`);
+        axios
+            .put(`${apiVegpont}/${data.id}`, data)
+
+            .then((response) => {
+                onsole.log("RESP", response);
+            })
+            .catch(function (error) {
+                console.log("hiba" + error);
+            })
+    }
+
+    deleteData(apiVegpont, data) {
+        console.log(`${apiVegpont}/${id}`);
+
+        axios
+            .delete(`${apiVegpont}/${id}`)
+
+            .then((response) => {
+                onsole.log("RESP", response);
+            })
+            .catch(function (error) {
+                console.log("hiba" + error);
+            })
+    }
+
 }
 export default DataService;
