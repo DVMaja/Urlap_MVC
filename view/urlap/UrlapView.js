@@ -54,7 +54,7 @@ class UrlapView {
                     break;
                 case "number":
                     //this.#numberElem(key);
-                    new NumberUrlap(key, this.#leiro[key], this.formElem);
+                    this.#urlapElemList.push(new NumberUrlap(key, this.#leiro[key], this.formElem));
                     break;
                 default:
                 // code block
