@@ -17,19 +17,20 @@ class NumberUrlap {
         this.#valid = false
 
         this.inputElem.on("keyup", () => {
+            this.#esemenyTrigger("validalas");
             this.#ertek = this.inputElem.val()
             let regex = this.elemleiro.regex
             let regReg = new RegExp(regex)
             console.log(regReg.test(this.#ertek))
             if (regReg.test(this.#ertek)) {
                 this.#valid = true
-                this.validElem.removeClass("lathato")
-                this.invalidElem.addClass("lathato")
+                this.validElem.removeClass("lathatosag")
+                this.invalidElem.addClass("lathatosag")
             }
             else {
-                this.#valid = false
-                this.invalidElem.removeClass("lathato")
-                this.validElem.addClass("lathato")
+                this.invalidElem.removeClass("lathatosag")
+                this.#valid = false;
+                this.validElem.addClass("lathatosag")
             }
 
         })
@@ -54,17 +55,18 @@ class NumberUrlap {
         <input type="${this.elemleiro.type}" class="form-control" id="${this.#key}" 
         placeholder="${this.elemleiro.placeholder}" name="${this.#key}"
         value="${this.elemleiro.value}"
-      pattern="${this.elemleiro.regex}"
-        
+      pattern="${this.elemleiro.regex}"        
         ">
         <div class="valid lathato">OK</div>
-        <div class="invalid lathato">${this.elemleiro.valid}</div>
-    
+        <div class="invalid lathato">${this.elemleiro.valid}</div>    
       </div>
         `
         this.formelem.append(txt)
+    }
 
-
+    #esemenyTrigger(esemenyneve) {
+        const esemeny = new CustomEvent("validalas", { detail: this });
+        window.dispatchEvent(esemeny);
     }
 }
 export default NumberUrlap;

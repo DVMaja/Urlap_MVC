@@ -16,7 +16,7 @@ class UrlapView {
 
         this.#urlapLetrehoz();
         this.submitElem = $("#submit");
-        this.submitElem.on("click", (evet) => { 
+        this.submitElem.on("click", (evet) => {
             evet.preventDefault();
             this.#valid = true;
             /**ha valid a form akkor adja vissza a form értékeit. */
