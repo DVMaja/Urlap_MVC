@@ -14,7 +14,7 @@ class TextUrlapElem {
 
         //a kettő megegyezik.
         this.validElem = this.formElem.children("div:last-child").children(".valid");
-        console.log(this.validElem);
+        //console.log(this.validElem);
         /* this.validElem = $(".valid:last");
         console.log(this.validElem); */
         this.invalidElem = this.formElem.children("div:last-child").children(".invalid");
@@ -24,7 +24,7 @@ class TextUrlapElem {
             this.#ertek = this.inputElem.val();
             let reg = this.#elemLeiro.regex; //szöveg jelenleg, regexet kell csinálni
             let regReg = new RegExp(reg);   //itt alakítjug regex-é 
-            //console.log(regReg.test(this.#ertek));
+            console.log(regReg.test(this.#ertek));
 
             if (regReg.test(this.#ertek)) {
                 this.#valid = true;
