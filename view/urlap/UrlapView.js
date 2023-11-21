@@ -6,12 +6,16 @@ class UrlapView {
     #urlapElemList = [];
     #valid = true;
     #urlapAdatok = {};
+    #kimeno = {};
 
     constructor(szuloElem, leiro) {
         this.#leiro = leiro;
         this.szuloElem = szuloElem;
         this.szuloElem.append("<form>");
         this.formElem = this.szuloElem.children("form");
+        this.#urlapAdatok;
+        this.#kimeno = [];
+        //this.#kimenoAdatok = this.#urlapAdatok;
         //console.log(this.formElem);
 
         this.#urlapLetrehoz();
@@ -22,12 +26,11 @@ class UrlapView {
             this.#valid = true;
             /**ha valid a form akkor adja vissza a form értékeit. */
             this.#urlapElemList.forEach((elem) => {
-                console.log(elem.valid);
+                //console.log(elem.valid);
                 this.#valid = this.#valid && elem.valid;
-                console.log(this.#valid);
-                console.log(this.#urlapAdatok);
-
+                //console.log(this.#valid);
             })
+            
             if (this.#valid) {
                 console.log("Valid az űrlap!");
                 /**Össze ell szedni az adatokat */
@@ -36,18 +39,27 @@ class UrlapView {
                     let kulcs = elem.key;
 
                     this.#urlapAdatok[kulcs] = ertek;
+                    this.#kimeno = this.#urlapAdatok;                   
 
-                    console.log(this.#urlapAdatok);//itt vannak összeszedve
+                    //console.log(this.#urlapAdatok);//itt vannak összeszedve
                     /**kontrollerben írja ki az adatokat */
                 })
+                    console.log(this.#kimeno);
+                    this.#setUrlapAdatok(); 
 
             } else {
                 console.log("Nem valid az űrlap!");
             }
-        })
+            this.#esemenyTrigger("katt");
+        })  
+         
+    }
+    #setUrlapAdatok(){        
+        this.#urlapAdatok = this.#kimeno;
         console.log(this.#urlapAdatok);
     }
-    getUrlapAdatok(){
+
+    getUrlapAdatok() {        
         return this.#urlapAdatok;
     }
 
@@ -72,6 +84,11 @@ class UrlapView {
         //console.log(txt);
         this.formElem.append(txt);
     }
+
+    #esemenyTrigger(esemenynev){
+        const esemenyem = new CustomEvent(esemenynev,{detail:this})
+        window.dispatchEvent(esemenyem)
+      }
 
 }
 export default UrlapView;

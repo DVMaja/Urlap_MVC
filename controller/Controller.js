@@ -6,24 +6,24 @@ import HibaView from "../view/tablazat/HibaView.js";
 
 class Controller {
 
-    constructor() {
-        //console.log("Construktor");
+    constructor() {       
         this.urlapModell = new UrlapModell();
         this.dataService = new DataService();
         this.urlapView = new UrlapView($(".urlap"), this.urlapModell.leiro);
-        console.log(this.urlapView.getUrlapAdatok());
-
         //../modell/adat.json --eredeti elérés, ezzel működik
         //http://localhost:8000/forms
-        this.dataService.getdata("api/forms", this.adatokMegj, this.hibaMegj);   //ide kéne beírni azt a végpontot amit nem tudtunk előállítani
-        //nem kell a gömbölyű zárójelk mert nem azonnal akarjuk megjeleníteni ez egy callback fügvény       
-
-
-        $(window).on("validalas", (event) => {
-            console.log("esemény működik");//sajnos nem
+        this.dataService.getdata("api/forms", this.adatokMegj, this.hibaMegj);  
+        
+        //ide kéne beírni azt a végpontot amit nem tudtunk előállítani
+        //nem kell a gömbölyű zárójelk mert nem azonnal akarjuk megjeleníteni ez egy callback fügvény
+        /* this.dataService.putData("api/forms/2", {            
+        }) */       
+       
+        $(window).on("validalas", (event) => { 
             this.dataService.postData("api/forms", this.urlapView.getUrlapAdatok());
-
-            //valamiért nem látja a  szül dátumot KERESD MEG HOL A HIBA
+            console.log("általam felvitt adatok: "+this.urlapView.getUrlapAdatok());
+            this.urlapView.getUrlapAdatok();
+                        
             //innen küldi majd az adatbázisba
         })
         //console.log(this.urlapModell.getLeiro());
