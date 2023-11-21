@@ -1,7 +1,10 @@
+
 class DataService {
     constructor() {
-
+        axios.defaults.baseURL = "http://localhost:8000/";
+       
     }
+
     getdata(apiVegpont, callback, hibaCallback) {//ez lesz az url
         //most nem a fetcet nézzük hanem az axiost
         //https://www.npmjs.com/package//axios
@@ -10,12 +13,12 @@ class DataService {
             .get(apiVegpont)
             .then(function (response) {
                 // handle success               
-               /*  console.log("Válasz objektum: ", response);
-                console.log("Adatok: ", response.data);
-                console.log("Státusz: ", response.status);
-                console.log("Státusz szöveg: ", response.statusText);
-                console.log("Válasz fejléc: ", response.headers);
-                console.log("Válasz config: ", response.config); */
+                /*  console.log("Válasz objektum: ", response);
+                 console.log("Adatok: ", response.data);
+                 console.log("Státusz: ", response.status);
+                 console.log("Státusz szöveg: ", response.statusText);
+                 console.log("Válasz fejléc: ", response.headers);
+                 console.log("Válasz config: ", response.config); */
                 callback(response.data);
             })
             .catch(function (error) {
@@ -31,13 +34,9 @@ class DataService {
     }
 
     postData(apiVegpont, data) {
-        axios
-            .post(apiVegpont, data, {
-                headers: {
-                    "X-CSRF-TOKEN": response.headers["x-csrf-token"], // Az XSRF token a válasz fejlécből
-                },
-            })
-
+        console.log(data);
+        axios        
+            .post(apiVegpont, data)
             .then((response) => {
                 console.log("RESP", response);
             })
