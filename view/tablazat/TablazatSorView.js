@@ -10,6 +10,7 @@ class TablazatSorView {
 
     this.#sor();
     this.sorElem = this.TablaElem.children("tbody").children("tr:last-child");
+    //console.log(this.sorElem);
 
     this.megseElem = this.sorElem.children("td").children(".megse");
     this.torolElem = this.sorElem.children("td").children(".torol");
@@ -20,20 +21,21 @@ class TablazatSorView {
     //this.megseElem.css("display", "none");
 
     this.pipaElem.on("click", () => {
-      this.sorElem.css('background-color', 'green');
+      this.sorElem.css("background-color", "green");
       this.pipaElem.css("display", "none");
       this.megseElem.css("display", "inline");
     })
 
     this.megseElem.on("click", () => {
-      this.sorElem.css('background-color', 'transparent');
+      this.sorElem.css("background-color", "transparent");
       this.megseElem.css("display", "none");
       this.pipaElem.css("display", "inline");
     })
 
     this.torolElem.on("click", () => {
+      console.log(this.torolElem);  
       this.sorElem.remove();
-      this.sorElem.css('background-color', 'transparent');
+      this.sorElem.css("background-color", "transparent");
       this.esemenyTrigger("torol");
     })
   }
