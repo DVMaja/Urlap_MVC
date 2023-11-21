@@ -24,7 +24,7 @@ class TextUrlapElem {
             this.#ertek = this.inputElem.val();
             let reg = this.#elemLeiro.regex; //szöveg jelenleg, regexet kell csinálni
             let regReg = new RegExp(reg);   //itt alakítjug regex-é 
-            console.log(regReg.test(this.#ertek));
+            //console.log(regReg.test(this.#ertek));
 
             if (regReg.test(this.#ertek)) {
                 this.#valid = true;
