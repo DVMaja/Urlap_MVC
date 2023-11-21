@@ -12,7 +12,7 @@ class UrlapView {
         this.szuloElem = szuloElem;
         this.szuloElem.append("<form>");
         this.formElem = this.szuloElem.children("form");
-        console.log(this.formElem);
+        //console.log(this.formElem);
 
         this.#urlapLetrehoz();
         this.submitElem = $("#submit");
@@ -50,9 +50,11 @@ class UrlapView {
             switch (this.#leiro[key].type) {
                 case "text":
                     //this.#textElem(key);
+                    console.log(this.#leiro[key]);
                     this.#urlapElemList.push(new TextUrlapElem(key, this.#leiro[key], this.formElem));
                     break;
                 case "number":
+                    console.log(this.#leiro[key]);
                     //this.#numberElem(key);
                     this.#urlapElemList.push(new NumberUrlap(key, this.#leiro[key], this.formElem));
                     break;

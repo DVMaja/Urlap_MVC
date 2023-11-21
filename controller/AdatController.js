@@ -6,7 +6,7 @@ import HibaView from "../view/tablazat/HibaView.js";
 class AdatController {
 
     constructor() {
-        console.log("Controller Const");
+        //console.log("Controller Const");
         this.dataService = new DataService();
         //../modell/adat.json --eredeti elérés, ezzel működik
         //http://localhost:8000/forms

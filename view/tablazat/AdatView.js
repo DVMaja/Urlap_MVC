@@ -6,7 +6,7 @@ class AdatView {
     constructor(lista, szuloElem) {
         this.#lista = lista;
         this.szuloElem = szuloElem;
-        console.log(this.#lista);
+        //console.log(this.#lista);
 
         this.tablazatView = new TablazatView(this.#lista, this.szuloElem);
     }

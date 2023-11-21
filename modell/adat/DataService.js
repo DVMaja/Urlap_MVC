@@ -10,12 +10,12 @@ class DataService {
             .get(apiVegpont)
             .then(function (response) {
                 // handle success               
-                console.log("Válasz objektum: ", response);
+               /*  console.log("Válasz objektum: ", response);
                 console.log("Adatok: ", response.data);
                 console.log("Státusz: ", response.status);
                 console.log("Státusz szöveg: ", response.statusText);
                 console.log("Válasz fejléc: ", response.headers);
-                console.log("Válasz config: ", response.config);
+                console.log("Válasz config: ", response.config); */
                 callback(response.data);
             })
             .catch(function (error) {
@@ -25,7 +25,7 @@ class DataService {
             })
             .finally(function () {
                 // always executed
-                console.log("finally");
+                //console.log("finally");
             });
 
     }

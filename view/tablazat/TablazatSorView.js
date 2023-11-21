@@ -15,7 +15,7 @@ class TablazatSorView {
     this.torolElem = this.sorElem.children("td").children(".torol");
     this.pipaElem = this.sorElem.children("td").children(".kesz");
 
-    console.log(this.sorElem);
+    //console.log(this.sorElem);
 
     //this.megseElem.css("display", "none");
 
