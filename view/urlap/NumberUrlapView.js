@@ -20,14 +20,14 @@ class NumberUrlap {
         this.inputElem.on("keyup", () => {
             this.#esemenyTrigger("validalas");
             this.#ertek = this.inputElem.val();
-            console.log("this.#ertek "+ this.#ertek)
+            //console.log("this.#ertek "+ this.#ertek)
             //console.log("elemleiro" + elemleiro)
             let reg = this.elemleiro.regex;
             //console.log("reg "+reg);
             let regReg = new RegExp(reg);
             //console.log("regReg: " + regReg);
 
-            console.log(regReg.test(this.#ertek));
+            //console.log(regReg.test(this.#ertek));
             if (regReg.test(this.#ertek)) {
                 this.#valid = true;
                 this.validElem.removeClass("lathatosag");
