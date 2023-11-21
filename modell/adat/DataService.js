@@ -34,7 +34,7 @@ class DataService {
     }
 
     postData(apiVegpont, data) {
-        console.log(data);
+        //console.log(data);
         axios        
             .post(apiVegpont, data)
             .then((response) => {
