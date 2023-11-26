@@ -76,6 +76,8 @@ class UrlapView {
                     //this.#numberElem(key);
                     this.#urlapElemList.push(new NumberUrlap(key, this.#leiro[key], this.formElem));
                     break;
+                    case "id":                   
+                    break;
                 default:
                 // code block
             }
