@@ -15,6 +15,7 @@ class TablazatSorView {
     this.megseElem = this.sorElem.children("td").children(".megse");
     this.torolElem = this.sorElem.children("td").children(".torol");
     this.pipaElem = this.sorElem.children("td").children(".kesz");
+    this.updateElem = this.sorElem.children("td").children(".update");
 
     //console.log(this.sorElem);
 
@@ -30,6 +31,10 @@ class TablazatSorView {
       this.sorElem.css("background-color", "transparent");
       this.megseElem.css("display", "none");
       this.pipaElem.css("display", "inline");
+    })
+    
+    this.updateElem.on("click", () => {
+      console.log('Változtatni')
     })
 
     this.torolElem.on("click", () => {
@@ -51,6 +56,7 @@ class TablazatSorView {
     }
     txt += `<td><span class="kesz">✔️</span>
                 <span class="megse">❌</span>
+                <span class="update">🦉</span>
                 <span class="torol">🗑️</span></td>`;
 
     txt += "</tr>";//</tbody>
