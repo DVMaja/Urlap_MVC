@@ -2,7 +2,7 @@
 class DataService {
     constructor() {
         axios.defaults.baseURL = "http://localhost:8000/";
-       
+
     }
 
     getdata(apiVegpont, callback, hibaCallback) {//ez lesz az url
@@ -35,7 +35,7 @@ class DataService {
 
     postData(apiVegpont, data) {
         //console.log(data);
-        axios        
+        axios
             .post(apiVegpont, data)
             .then((response) => {
                 console.log("RESP", response);
