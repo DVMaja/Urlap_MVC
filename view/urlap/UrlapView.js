@@ -31,7 +31,7 @@ class UrlapView {
                 this.#valid = this.#valid && elem.valid;
                 //console.log(this.#valid);
             })
-            
+
             if (this.#valid) {
                 console.log("Valid az űrlap!");
                 /**Össze ell szedni az adatokat */
@@ -40,27 +40,27 @@ class UrlapView {
                     let kulcs = elem.key;
 
                     this.#urlapAdatok[kulcs] = ertek;
-                    this.#kimeno = this.#urlapAdatok;                   
+                    this.#kimeno = this.#urlapAdatok;
 
                     //console.log(this.#urlapAdatok);//itt vannak összeszedve
                     /**kontrollerben írja ki az adatokat */
                 })
-                    console.log(this.#kimeno);
-                    this.#setUrlapAdatok(); 
+                //console.log(this.#kimeno);
+                this.#setUrlapAdatok();
 
             } else {
                 console.log("Nem valid az űrlap!");
             }
             this.#esemenyTrigger("validalas");
-        })  
-         
+        })
+
     }
-    #setUrlapAdatok(){        
+    #setUrlapAdatok() {
         this.#urlapAdatok = this.#kimeno;
-        console.log(this.#urlapAdatok);
+        //console.log(this.#urlapAdatok);
     }
 
-    getUrlapAdatok() { 
+    getUrlapAdatok() {
         //console.log(this.#urlapAdatok)   ;    
         return this.#urlapAdatok;
     }
@@ -78,7 +78,7 @@ class UrlapView {
                     //this.#numberElem(key);
                     this.#urlapElemList.push(new NumberUrlap(key, this.#leiro[key], this.formElem));
                     break;
-                    case "id":                   
+                case "id":
                     break;
                 default:
                 // code block
@@ -89,10 +89,10 @@ class UrlapView {
         this.formElem.append(txt);
     }
 
-    #esemenyTrigger(esemenynev){
-        const esemenyem = new CustomEvent(esemenynev,{detail:this})
+    #esemenyTrigger(esemenynev) {
+        const esemenyem = new CustomEvent(esemenynev, { detail: this })
         window.dispatchEvent(esemenyem)
-      }
+    }
 
 }
 export default UrlapView;
