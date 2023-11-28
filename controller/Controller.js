@@ -15,6 +15,7 @@ class Controller {
         //../modell/adat.json --eredeti elérés, ezzel működik
         //http://localhost:8000/forms
         this.dataService.getdata("api/forms", this.adatokMegj, this.hibaMegj);
+        
 
         //ide kéne beírni azt a végpontot amit nem tudtunk előállítani
         //nem kell a gömbölyű zárójelk mert nem azonnal akarjuk megjeleníteni ez egy callback fügvény
@@ -23,7 +24,7 @@ class Controller {
 
         $(window).on("validalas", (event) => {
             this.dataService.postData("api/forms", this.urlapView.getUrlapAdatok());
-            console.log("általam felvitt adatok: " + this.urlapView.getUrlapAdatok());
+            //console.log("általam felvitt adatok: " + this.urlapView.getUrlapAdatok());
             this.urlapView.getUrlapAdatok();
 
             //innen küldi majd az adatbázisba

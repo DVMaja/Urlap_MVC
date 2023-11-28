@@ -20,6 +20,7 @@ class UrlapView {
 
         this.#urlapLetrehoz();
         this.submitElem = $("#submitGomb");
+
         this.submitElem.on("click", (evet) => {
             console.log("submitGomb");
             evet.preventDefault();
@@ -50,7 +51,7 @@ class UrlapView {
             } else {
                 console.log("Nem valid az űrlap!");
             }
-            this.#esemenyTrigger("katt");
+            this.#esemenyTrigger("validalas");
         })  
          
     }
@@ -59,7 +60,8 @@ class UrlapView {
         console.log(this.#urlapAdatok);
     }
 
-    getUrlapAdatok() {        
+    getUrlapAdatok() { 
+        //console.log(this.#urlapAdatok)   ;    
         return this.#urlapAdatok;
     }
 
